@@ -65,51 +65,7 @@ streamlit run app.py
 
 ---
 
-## 💻 Sample Code
 
-```python
-import streamlit as st
-from gtts import gTTS
-import tempfile
-
-st.title("🗣️ Text to Speech Converter")
-st.write("Convert your text into speech using gTTS and Streamlit")
-
-# Text input
-text = st.text_area("Enter text here:")
-
-if st.button("Convert to Speech"):
-    if text.strip():
-        # Convert text to speech
-        tts = gTTS(text)
-        
-        # Create temporary file to store audio
-        with tempfile.NamedTemporaryFile(delete=True) as temp_audio:
-            tts.save(f"{temp_audio.name}.mp3")
-            
-            # Play the audio
-            st.audio(f"{temp_audio.name}.mp3", format="audio/mp3")
-    else:
-        st.warning("Please enter some text before converting.")
-```
-
----
-
-## 📸 Example Output
-
-When you run the app, you’ll see:
-
-```
-🗣️ Text to Speech Converter
----------------------------------
-[Text Input Box]
-
-[Convert to Speech Button]
-```
-
-After clicking **Convert to Speech**, the app will play the generated audio instantly.
-
----
 
 ## 🌟 Future Enhancements
 
@@ -122,8 +78,8 @@ After clicking **Convert to Speech**, the app will play the generated audio inst
 
 ## 🧑‍💻 Author
 
-**Your Name**
-💼 [LinkedIn](https://www.linkedin.com) | 🐙 [GitHub](https://github.com/your-username)
+**Muhammad Naveed**
+💼 [LinkedIn](https://www.linkedin.com) | 🐙 [GitHub](https://github.com/naveedjat)
 
 ---
 
